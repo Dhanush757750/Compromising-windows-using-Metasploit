@@ -1,4 +1,4 @@
-<img width="479" height="66" alt="548621850-28807bd2-546a-4886-bf66-2ec88b6b030c" src="https://github.com/user-attachments/assets/18672b97-44fa-44b0-81b7-dfc2a3a2d245" /><img width="618" height="370" alt="548616406-577cc3a3-ba98-4d4c-8d3a-0a504115bbdb" src="https://github.com/user-attachments/assets/30fab1b3-2a5f-498b-b59b-a5827c1c86af" /># Compromising-windows-using-Metasploit
+# Compromising-windows-using-Metasploit
 Compromising windows using Metasploit
 # Metasploit
 Compromising windows using Metasploit
