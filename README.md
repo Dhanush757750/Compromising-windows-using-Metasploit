@@ -116,7 +116,7 @@ keyscan_start	Begins capturing keys typed in the target. On the Windows target, 
 keyscan_dump	Shows the keystrokes captured so far
 ## OUTPUT:
 
-<img width="431" height="102" alt="Screenshot 2026-08-24 231936" src="https://github.com/user-attachments/assets/9d9bdfc8-2602-4b0b-b845-383221a7eb00" />
+<img width="431" height="102" alt="Screenshot 2026-08-24 231936" src="https://github.com/user-attachments/assets/35f496a9-6811-420a-ada8-cd2a47c280f8" />
 
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
