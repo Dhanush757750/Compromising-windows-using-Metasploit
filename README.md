@@ -90,7 +90,7 @@ To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
 ## OUTPUT:
 
-<img width="385" height="120" alt="image" src="https://github.com/user-attachments/assets/2d6f6966-bab8-4f00-942f-1e570683bdd5" />
+<img width="1531" height="848" alt="645098381-de88aea1-32d5-4e29-a48d-c80fd744f913" src="https://github.com/user-attachments/assets/118b4f8e-e7fc-4a3e-8d75-6cdc76c39b46" />
 
 The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost.
 To become more persistent, we'll migrate to a process that will last longer.
@@ -104,19 +104,19 @@ A list of network connections appears, including one to a remote port of 4444, a
 Notice the "PID/Program name" value for this connection, which is redacted 
 ## OUTPUT:
 
-<img width="618" height="370" alt="548616406-577cc3a3-ba98-4d4c-8d3a-0a504115bbdb" src="https://github.com/user-attachments/assets/4eebabe8-0666-4535-b898-4fdb1f2fe08f" />
+<img width="822" height="160" alt="645098493-1af3dcfc-2372-4730-b168-adbb1f30493a" src="https://github.com/user-attachments/assets/89c692d1-c518-458a-819c-321638abf01e" />
 
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
 ## OUTPUT:
 
-<img width="322" height="41" alt="Screenshot 2026-08-24 231930" src="https://github.com/user-attachments/assets/753d6e69-3288-440d-936f-d10eeba618d6" />
+<img width="1586" height="881" alt="645098661-5acdcbc2-fcba-4116-9455-0b122e90d44c" src="https://github.com/user-attachments/assets/e6b5576d-9d48-4dc4-be05-621693920511" />
 
 keyscan_dump	Shows the keystrokes captured so far
 ## OUTPUT:
 
-<img width="431" height="102" alt="Screenshot 2026-08-24 231936" src="https://github.com/user-attachments/assets/35f496a9-6811-420a-ada8-cd2a47c280f8" />
+<img width="898" height="291" alt="645098772-c0c1862a-8ecb-4cf0-85bb-a23c6c2b6a9b" src="https://github.com/user-attachments/assets/6c52f067-669e-4c55-8977-9e9fc4c2cf0a" />
 
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
